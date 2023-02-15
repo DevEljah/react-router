@@ -2,11 +2,11 @@
 
 #### React Course
 
-[My React Course](https://www.udemy.com/course/react-tutorial-and-projects-course/?referralCode=FEE6A921AF07E2563CEF)
+[Jahn Smilga's React Course](https://www.udemy.com/course/react-tutorial-and-projects-course/?referralCode=FEE6A921AF07E2563CEF)
 
 #### Support
 
-Find the App Useful? [You can always buy me a coffee](https://www.buymeacoffee.com/johnsmilga)
+Find the App Useful? [You can always buy him a coffee](https://www.buymeacoffee.com/johnsmilga)
 
 #### Run Complete Project
 
@@ -14,7 +14,7 @@ Find the App Useful? [You can always buy me a coffee](https://www.buymeacoffee.c
 
 ```js
 // import App from './App';
-import App from './final/App';
+import App from "./final/App";
 ```
 
 #### Docs
@@ -32,15 +32,15 @@ npm install react-router-dom@6
 - App.js
 
 ```js
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<div>home page</div>} />
+        <Route path="/" element={<div>home page</div>} />
         <Route
-          path='testing'
+          path="testing"
           element={
             <div>
               <h2>testing </h2>
@@ -60,18 +60,18 @@ export default App;
 - App.js
 
 ```js
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Products from './pages/Products';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Products from "./pages/Products";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='about' element={<About />} />
-        <Route path='products' element={<Products />} />
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="products" element={<Products />} />
       </Routes>
     </BrowserRouter>
   );
@@ -110,10 +110,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='about' element={<About />} />
-        <Route path='products' element={<Products />} />
-        <Route path='*' element={<Error />} />
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="products" element={<Products />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );
@@ -123,14 +123,14 @@ function App() {
 - Error.js
 
 ```js
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Error = () => {
   return (
-    <section className='section'>
+    <section className="section">
       <h2>404</h2>
       <p>page not found</p>
-      <Link to='/'>back home</Link>
+      <Link to="/">back home</Link>
     </section>
   );
 };
@@ -148,10 +148,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home />}>
-          <Route path='about' element={<About />} />
-          <Route path='products' element={<Products />} />
-          <Route path='*' element={<Error />} />
+        <Route path="/" element={<Home />}>
+          <Route path="about" element={<About />} />
+          <Route path="products" element={<Products />} />
+          <Route path="*" element={<Error />} />
         </Route>
       </Routes>
     </BrowserRouter>
@@ -164,11 +164,11 @@ function App() {
 - Home.js
 
 ```js
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet } from "react-router-dom";
 
 const Home = () => {
   return (
-    <section className='section'>
+    <section className="section">
       <h2>Home Page</h2>
       <Outlet />
     </section>
@@ -182,14 +182,14 @@ export default Home;
 - Navbar.js
 
 ```js
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className='navbar'>
-      <Link to='/'>Home</Link>
-      <Link to='/about'>About</Link>
-      <Link to='/products'>Products</Link>
+    <nav className="navbar">
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
+      <Link to="/products">Products</Link>
     </nav>
   );
 };
@@ -199,13 +199,13 @@ export default Navbar;
 - Home.js
 
 ```js
-import { Link, Outlet } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import { Link, Outlet } from "react-router-dom";
+import Navbar from "../components/Navbar";
 const Home = () => {
   return (
     <>
       <Navbar />
-      <section className='section'>
+      <section className="section">
         <Outlet />
       </section>
     </>
@@ -225,13 +225,13 @@ export default Home;
 - SharedLayout.js
 
 ```js
-import { Link, Outlet } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import { Link, Outlet } from "react-router-dom";
+import Navbar from "../components/Navbar";
 const SharedLayout = () => {
   return (
     <>
       <Navbar />
-      <section className='section'>
+      <section className="section">
         <Outlet />
       </section>
     </>
@@ -245,7 +245,7 @@ export default SharedLayout;
 ```js
 const Home = () => {
   return (
-    <section className='section'>
+    <section className="section">
       <h2>Home Page</h2>
     </section>
   );
@@ -260,11 +260,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<SharedLayout />}>
+        <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
-          <Route path='about' element={<About />} />
-          <Route path='products' element={<Products />} />
-          <Route path='*' element={<Error />} />
+          <Route path="about" element={<About />} />
+          <Route path="products" element={<Products />} />
+          <Route path="*" element={<Error />} />
         </Route>
       </Routes>
     </BrowserRouter>
@@ -277,13 +277,13 @@ function App() {
 - StyledNavbar.js
 
 ```js
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
-<nav className='navbar'>
+<nav className="navbar">
   <NavLink
-    to='/about'
+    to="/about"
     style={({ isActive }) => {
-      return { color: isActive ? 'red' : 'grey' };
+      return { color: isActive ? "red" : "grey" };
     }}
   >
     Home
@@ -296,10 +296,10 @@ import { NavLink } from 'react-router-dom';
 - StyledNavbar.js
 
 ```js
-<nav className='navbar'>
+<nav className="navbar">
   <NavLink
-    to='/'
-    className={({ isActive }) => (isActive ? 'link active' : 'link')}
+    to="/"
+    className={({ isActive }) => (isActive ? "link active" : "link")}
   >
     Home
   </NavLink>
@@ -315,12 +315,12 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<SharedLayout />}>
+        <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
-          <Route path='about' element={<About />} />
-          <Route path='products' element={<Products />} />
-          <Route path='products/:productId' element={<SingleProduct />} />
-          <Route path='*' element={<Error />} />
+          <Route path="about" element={<About />} />
+          <Route path="products" element={<Products />} />
+          <Route path="products/:productId" element={<SingleProduct />} />
+          <Route path="*" element={<Error />} />
         </Route>
       </Routes>
     </BrowserRouter>
@@ -333,15 +333,15 @@ function App() {
 - SingleProduct.js
 
 ```js
-import { Link, useParams } from 'react-router-dom';
-import products from '../data';
+import { Link, useParams } from "react-router-dom";
+import products from "../data";
 const SingleProduct = () => {
   const { productId } = useParams();
 
   return (
-    <section className='section product'>
+    <section className="section product">
       <h2>{productId}</h2>
-      <Link to='/products'>back to products</Link>
+      <Link to="/products">back to products</Link>
     </section>
   );
 };
@@ -354,13 +354,13 @@ export default SingleProduct;
 - Products.js
 
 ```js
-import { Link } from 'react-router-dom';
-import products from '../data';
+import { Link } from "react-router-dom";
+import products from "../data";
 const Products = () => {
   return (
-    <section className='section'>
+    <section className="section">
       <h2>products</h2>
-      <div className='products'>
+      <div className="products">
         {products.map((product) => {
           return (
             <article key={product.id}>
@@ -382,18 +382,18 @@ export default Products;
 - SingleProduct.js
 
 ```js
-import { Link, useParams } from 'react-router-dom';
-import products from '../data';
+import { Link, useParams } from "react-router-dom";
+import products from "../data";
 const SingleProduct = () => {
   const { productId } = useParams();
   const product = products.find((product) => product.id === productId);
   const { image, name } = product;
 
   return (
-    <section className='section product'>
+    <section className="section product">
       <img src={image} alt={name} />
       <h5>{name}</h5>
-      <Link to='/products'>back to products</Link>
+      <Link to="/products">back to products</Link>
     </section>
   );
 };
@@ -414,14 +414,14 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<SharedLayout />}>
+        <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
-          <Route path='about' element={<About />} />
-          <Route path='products' element={<Products />} />
-          <Route path='products/:productId' element={<SingleProduct />} />
-          <Route path='login' element={<Login setUser={setUser} />} />
-          <Route path='dashboard' element={<Dashboard user={user} />} />
-          <Route path='*' element={<Error />} />
+          <Route path="about" element={<About />} />
+          <Route path="products" element={<Products />} />
+          <Route path="products/:productId" element={<SingleProduct />} />
+          <Route path="login" element={<Login setUser={setUser} />} />
+          <Route path="dashboard" element={<Dashboard user={user} />} />
+          <Route path="*" element={<Error />} />
         </Route>
       </Routes>
     </BrowserRouter>
@@ -456,7 +456,7 @@ const Login = ({ setUser }) => {
 ```js
 const Dashboard = ({ user }) => {
   return (
-    <section className='section'>
+    <section className="section">
       <h4>Hello, {user?.name}</h4>
     </section>
   );
@@ -470,7 +470,7 @@ export default Dashboard;
 
 ```js
 <Route
-  path='dashboard'
+  path="dashboard"
   element={
     <ProtectedRoute user={user}>
       <Dashboard user={user} />
@@ -482,11 +482,11 @@ export default Dashboard;
 - ProtectedRoute.js
 
 ```js
-import { Navigate } from 'react-router-dom';
+import { Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ children, user }) => {
   if (!user) {
-    return <Navigate to='/' />;
+    return <Navigate to="/" />;
   }
   return children;
 };
